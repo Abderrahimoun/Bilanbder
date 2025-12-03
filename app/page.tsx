@@ -41,7 +41,7 @@ const BilanTravail = () => {
   const cards: Card[] = [
     {
       title: "Prototypage & Tests",
-      badge: "En cours",
+      badge: "Done",
       consequence: "Risques techniques non identifiés, solutions non validées",
       problems: [
         {
@@ -84,7 +84,7 @@ Vérifier la performance d'étanchéité et la compatibilité des matériaux (pa
     },
     {
       title: "Étanchéité & Isolation",
-      badge: "En Cours",
+      badge: "Done",
       consequence: "Incertitude sur performance réelle du dôme",
       problems: [
         {
@@ -201,7 +201,7 @@ C. Fixation complémentaire (options)
     },
     {
       title: "Analyse cycle de vie comparative des matériaux",
-      badge: "Structurant",
+      badge: "Done",
       consequence: "Informations incomplètes sur l'impact environnemental et la recyclabilité des choix matériaux",
       problems: [
         {
