@@ -20,6 +20,7 @@ const BilanTravail = () => {
     title: string;
     description: string;
     image?: string;
+    file?: string;
   }
 
   interface Card {
@@ -229,14 +230,16 @@ Tableau comparatif synthétique + recommandation priorisée (matériau préfér�
         {
           id: 1,
           title: "Protocole 1",
-          description: "Description du premier protocole de test",
-          image: "/file.svg"
+          description: "Protocole de calcul de la surface d'un triangle du dôme",
+          image: "/images/protocoles/protocole-1.png",
+          file: "/protocoles/protocole-1.pdf"
         },
         {
           id: 2,
           title: "Protocole 2",
-          description: "Description du deuxième protocole de test",
-          image: "/globe.svg"
+          description: "Test Technique pour definir le jeu pour les connecteurs base du dôme",
+          image: "/images/protocoles/protocole-2.png",
+          file: "/protocoles/protocole-2.pdf"
         }
       ],
       action: "Définir et documenter les protocoles de test avec images."
@@ -323,7 +326,7 @@ Documenter l'approche éthique et technique adoptée pour le développement du d
           <p className="text-lg md:text-xl text-blue-100">Abderrahim Mounouar - Travaux en Cours</p>
           <div className="mt-4 flex items-center gap-2 text-sm text-blue-100">
             <AlertCircle size={16} />
-            <span>Dernière mise à jour : Novembre 2025</span>
+            <span>Dernière mise à jour : Décembre 2025</span>
           </div>
         </div>
 
@@ -500,12 +503,26 @@ Documenter l'approche éthique et technique adoptée pour le développement du d
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                           {card.protocols.map((protocol) => (
-                            <div
+                            <a
                               key={protocol.id}
-                              className="bg-gradient-to-br from-blue-50 to-blue-100 border-l-4 border-blue-400 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                              href={protocol.file || '#'}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-gradient-to-br from-blue-50 to-blue-100 border-l-4 border-blue-400 p-4 rounded-lg shadow-sm hover:shadow-md hover:border-blue-600 transition-all cursor-pointer block"
                             >
                               <div className="flex items-center gap-3 mb-3">
-                                <ImageIcon className="text-blue-600 flex-shrink-0" size={20} />
+                                {protocol.image ? (
+                                  <div className="relative w-10 h-10 flex-shrink-0">
+                                    <Image
+                                      src={protocol.image}
+                                      alt={protocol.title}
+                                      fill
+                                      className="object-contain rounded"
+                                    />
+                                  </div>
+                                ) : (
+                                  <ImageIcon className="text-blue-600 flex-shrink-0" size={20} />
+                                )}
                                 <h4 className="text-sm font-bold text-gray-900">{protocol.title}</h4>
                               </div>
                               {protocol.image && (
@@ -523,7 +540,15 @@ Documenter l'approche éthique et technique adoptée pour le développement du d
                               <p className="text-xs text-gray-700 leading-relaxed">
                                 {protocol.description}
                               </p>
-                            </div>
+                              {protocol.file && (
+                                <div className="mt-3 flex items-center gap-2 text-xs text-blue-600 font-semibold">
+                                  <span>📄 Ouvrir le PDF du protocole</span>
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                  </svg>
+                                </div>
+                              )}
+                            </a>
                           ))}
                         </div>
                       </>
