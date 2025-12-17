@@ -74,3 +74,4 @@ Tester plusieurs angles décroissants et observer écoulement vs stagnation, ave
 
 Ce protocole permettra de déterminer l'angle minimal nécessaire pour garantir un bon écoulement de l'eau sur la membrane EPDM du dôme géodésique, évitant ainsi les stagnations et les risques d'infiltration.
 
+

@@ -223,7 +223,7 @@ Tableau comparatif synthétique + recommandation priorisée (matériau préfér�
     },
     {
       title: "Protocole",
-      badge: "En cours",
+      badge: "Done",
       consequence: "Protocoles de test et validation à définir",
       problems: [],
       protocols: [
@@ -246,7 +246,7 @@ Tableau comparatif synthétique + recommandation priorisée (matériau préfér�
     },
     {
       title: "Rapport éthico-technique",
-      badge: "En cours",
+      badge: "Done",
       consequence: "Documentation incomplète de l'approche éthique et technique du projet",
       problems: [
         {
@@ -396,7 +396,7 @@ Documenter l'approche éthique et technique adoptée pour le développement du d
                   <span>Définition d'une documentation pour explication du jeu choisi</span>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <div className="mt-1 w-2 h-2 rounded-full bg-red-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                  <div className="mt-1 w-2 h-2 rounded-full bg-green-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
                   <span>Préparation du rapport éthico-technique du dôme</span>
                 </li>
               </ul>
@@ -404,21 +404,29 @@ Documenter l'approche éthique et technique adoptée pour le développement du d
 
             {/* Continuous Section */}
             <div className="rounded-xl border-l-4 border-purple-500 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 p-5">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-6 h-6 rounded-full border-4 border-purple-600 border-t-transparent animate-spin"></div>
+              <div className="flex items-center gap-3 mb-4">   
+                <CheckCircle className="text-blue-600 " size={24} />
                 <h3 className="font-bold text-purple-800 text-lg">En cours - Semaines 5-10</h3>
               </div>
               <ul className="text-sm text-gray-700 space-y-3 ml-9">
                 <li className="flex items-start gap-3 group">
-                  <div className="mt-1 w-2 h-2 rounded-full bg-purple-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                  <div className="mt-1 w-2 h-2 rounded-full bg-green-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
                   <span>Brainstorming/Définition de la forme de la porte () </span>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <div className="mt-1 w-2 h-2 rounded-full bg-purple-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
-                  <span>-</span>
+                  <div className="mt-1 w-2 h-2 rounded-full bg-green-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                  <span>Préparation des deux présentation du projet et de l'analyse éthicotechnique</span>
                 </li>
                 <li className="flex items-start gap-3 group">
-                  <div className="mt-1 w-2 h-2 rounded-full bg-purple-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                  <div className="mt-1 w-2 h-2 rounded-full bg-green-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                  <span>Montage de la video  du projet</span>
+                </li>
+                <li className="flex items-start gap-3 group">
+                  <div className="mt-1 w-2 h-2 rounded-full bg-green-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                  <span>Visite de concarneau</span>
+                </li>
+                <li className="flex items-start gap-3 group">
+                  <div className="mt-1 w-2 h-2 rounded-full bg-green-500 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
                   <span>Documentation photo et technique au fur et à mesure</span>
                 </li>
               </ul>
